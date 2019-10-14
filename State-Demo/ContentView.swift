@@ -9,8 +9,34 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var name = "Mayur"
+    
     var body: some View {
-        Text("Hello World")
+        //Vertical Stack
+        VStack {
+            
+            //Text or label of the name
+            Text(name)
+                .font(.largeTitle)  // Font type
+            
+            
+            Button(action : {
+                /*
+                 - When user clicks on the button this block will be executed
+                 - When user click on the button  View will rendered again since we are changing or mutating the @State variabl value
+                */
+                self.name = "Rathod"
+            }){
+                //Button Text Properties
+                Text("Chnage Name") // Button Text
+                    .fontWeight(.heavy) // Button Text Weight
+                    .padding()          // Padding to the button
+                    .background(Color.orange)   // Button Background Color
+                    .foregroundColor(Color.white)   // Button text color
+                    .cornerRadius(10.0) // Button corner radius property
+            }
+        }
     }
 }
 

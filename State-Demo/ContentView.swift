@@ -29,7 +29,7 @@ struct ContentView: View {
                 self.name = "Rathod"
             }){
                 //Button Text Properties
-                Text("Chnage Name") // Button Text
+                Text("Change Name") // Button Text
                     .fontWeight(.heavy) // Button Text Weight
                     .padding()          // Padding to the button
                     .background(Color.orange)   // Button Background Color
